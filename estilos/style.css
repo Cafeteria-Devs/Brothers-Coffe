@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+:root {
+    --vinho: #3C140C;
+    --darkcoffe: #28160C;
+    --mediumcoffe: #432614;
+    --ligthcoffe: #DAA466;
+    --branco: #DBCFC1;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* rolagem suave */
+}
+
+nav {
+    background-color: var(--branco);
+    padding: 15px;
+    height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.nav-logo {
+    position: absolute;
+    left: 40px;
+}
+
+.nav-logo > img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: var(--darkcoffe);
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+nav > ul > li > a:hover {
+    background-color: var(--vinho);
+    color: var(--ligthcoffe);
+    border-radius: 10px;
+}
+
+#img {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), url("../imagens/cafeteria.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.text-content {
+    color: var(--branco);
+    max-width: 700px;
+    padding: 20px;
+}
+
+.text-content h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.btn-scroll {
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 1.1em;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-scroll span {
+    font-size: 2em;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+#img2 {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), url("../imagens/cafe-fundo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+div > p > a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: #DAA466;
+}
+
+.footer {
+    background-color: var(--darkcoffe);
+    color: var(--branco);
+    padding: 60px 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 180px;
+}
+
+.footer-col h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--ligthcoffe);
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 0.95em;
+}
+
+.footer-col a:hover {
+    color: var(--ligthcoffe);
+}
+
+.logo-col p {
+    font-size: 0.95em;
+    max-width: 260px;
+}
+
+.footer-logo {
+    width: 180px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.85em;
+}
