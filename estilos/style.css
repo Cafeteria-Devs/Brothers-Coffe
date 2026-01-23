@@ -61,6 +61,17 @@ nav > ul > li > a:hover {
     border-radius: 10px;
 }
 
+.nav-carrinho {
+    position: absolute;
+    right: 40px;
+    top: 35px;
+}
+
+.nav-carrinho > img {
+    width: 45px;
+    border-radius: 50%;
+}
+
 #img {
     height: 100vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), url("../imagens/cafeteria.jpg");
