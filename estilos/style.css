@@ -211,3 +211,12 @@ div > p > a {
     text-align: center;
     font-size: 0.85em;
 }
+
+body {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
+}
