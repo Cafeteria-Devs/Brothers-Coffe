@@ -23,7 +23,7 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="index.html" 
+                <li><a href="../../index.html" 
                     onclick="fade(event)">Início</a></li>
                 <li><a href="../abas/cardapio.html" onclick="fade(event)">Cardápio</a></li>
                 <li><a href="../abas/restaurantes.html" onclick="fade(event)">Lojas</a></li>
@@ -44,7 +44,7 @@
     <main>
         <section>
             <h1>Cardápio</h1>
-            <div id="conteiner">
+            <div class="conteiner">
 
                 <div class="produto">
                     <a href="produtos/cappucino.html">
@@ -58,12 +58,12 @@
                 </div>
 
                 <div class="produto">
-                    <a href="produtos/cafepreto.html">
+                    <a href="produtos/americano.html">
                         <div class="card">
-                            <img src="../imagens/cafe_preto.png" alt="Café Preto">
+                            <img src="../imagens/americano.png" alt="Café Americano">
                         </div>
                         <div class="nome">
-                            <h2>Café Preto</h2>
+                            <h2>Americano</h2>
                         </div>
                     </a>
                 </div>
@@ -78,8 +78,135 @@
                         </div>
                     </a>
                 </div>
+
+                <div class="produto">
+                    <a href="produtos/conpanna.html">
+                        <div class="card">
+                            <img src="../imagens/mocha.png" alt="Mocha">
+                        </div>
+                        <div class="nome">
+                            <h2>Mocha</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="produto">
+                    <a href="produtos/flatwhite.html">
+                        <div class="card">
+                            <img src="../imagens/flat_white.png" alt="Flat White">
+                        </div>
+                        <div class="nome">
+                            <h2>Flat White</h2>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="produto">
+                    <a href="produtos/dalgona.html">
+                        <div class="card">
+                            <img src="../imagens/dalgona.png" alt="Dalgona Café">
+                        </div>
+                        <div class="nome">
+                            <h2>Dalgona</h2>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="produto">
+                    <a href="produtos/glace.html">
+                        <div class="card">
+                            <img src="../imagens/glace.png" alt="Glace Café">
+                        </div>
+                        <div class="nome">
+                            <h2>Glace</h2>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="produto">
+                    <a href="produtos/marocchino.html">
+                        <div class="card">
+                            <img src="../imagens/marocchino.png" alt="Marocchino">
+                        </div>
+                        <div class="nome">
+                            <h2>Marocchino</h2>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="produto">
+                    <a href="produtos/pistachioaffogatto.html">
+                        <div class="card">
+                            <img src="../imagens/pistachio_affogatto.png" alt="Pistachio Affogatto">
+                        </div>
+                        <div class="nome">
+                            <h2>Pistachio Affogatto</h2>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h1 id="hcaf">CONSULTE QUAL A CAFETERIA MAIS PERTO DE VOCÊ!</h1>
+            <div class="conteiner">
+                <div id="cep">
+                    <h2 id="textcep">Digite seu CEP</h2>
+                    <form action="cep.js" method="get" autocomplete="on">
+                        <p>
+                            <label for="icep"></label>
+                            <input type="text" name="cep" id="icep" placeholder="00000-000" pattern="[0-9]{8}" title="Digite um CEP com 8 números" required>
+                        </p>
+
+                        <p>
+                            <input type="submit" value="Localizar">
+                            <input type="reset" value="Limpar">
+                        </p>
+                    </form>
+                </div>
+
+                <div id="emojloc">
+                    <img src="../imagens/loc.png" alt="Localização">
+                </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col logo-col">
+                <img src="../imagens/logo-sem-fundo.png" alt="Brothers Coffee" class="footer-logo">
+                <p>Entre em contato para o desenvolvimento de projetos.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Institucional</h3>
+                <a href="../../index.html">Início</a>
+                <a href="../abas/restaurantes.html">Lojas</a>
+                <a href="../abas/contatos.html">Contato</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <a href="../abas/cardapio.html">Cardápio</a>
+                <a href="../abas/apoiadores.html">Clube Coffee</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Redes sociais</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/grouppdev?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="../imagens/logo-insta.png" alt="Instagram"></a>
+                    <a href="https://github.com/EduardoMatheusDev" target="_blank"><img src="../imagens/logo-git-hub.png" alt="GitHub"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>Projeto desenvolvido inteiramente do zero. Imagens meramente ilustrativas. © 2026</p>
+        </div>
+    </footer>
 </body>
 </html>
