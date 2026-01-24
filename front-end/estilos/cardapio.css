@@ -1,7 +1,88 @@
 @charset "UTF-8";
 
+:root {
+    --vinho: #3C140C;
+    --darkcoffe: #28160C;
+    --mediumcoffe: #432614;
+    --ligthcoffe: #DAA466;
+    --branco: #DBCFC1;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 h1 {
+    color: var(--darkcoffe);
     text-align: center;
     font-size: 2.5em;
     margin: 30px;
+    font-family: 'Bebas Neue';
 }
+
+#conteiner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+    gap: 40px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.produto a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.produto:hover {
+    
+
+    transition: 1s;
+}
+
+.card {
+    width: 400px;
+    height: 270px;
+    background-color: #DBCFC1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+    border: 1px solid var(--darkcoffe);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nome {
+    width: 400px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #28160C;
+    border-top: none;
+}
+
+.nome > h2 {
+    color: var(--darkcoffe);
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
