@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+:root {
+    --vinho: #3C140C;
+    --darkcoffe: #28160C;
+    --mediumcoffe: #432614;
+    --ligthcoffe: #DAA466;
+    --branco: #DBCFC1;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contato-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f7f4ef;
+}
+
+.contato-titulo {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #3b2a1a;
+}
+
+.contato-subtitulo {
+    font-size: 1.1rem;
+    margin-bottom: 60px;
+    color: #6b5a4a;
+}
+
+.contato-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contato-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    width: 300px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contato-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.contato-card img {
+    width:50px;
+}
+
+.contato-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #3b2a1a;
+}
+
+.contato-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
