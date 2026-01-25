@@ -1,31 +1,31 @@
-import getAddress from './app' 
-
-export async function route(nome, tel,  rua, numeroDaCasa, bairro, cidade) {
+export function route(cliente, tel, rua, numeroDaCasa, bairro, cidade) {
     try {
-        if(rua && numeroDaCasa && bairro && cidade && tel && nome) {
-            const endereco = `${rua}, ${numero da casa} - ${bairro}, ${cidade}`;
-            const enderecoCriptografado = encodeURIComponent(endereco);
-
-            const linkGoogleMaps = `https://www.google.com/maps/dir/?api=1&destination=${enderecoCriptografado}&travelmode=driving`;
-
-            const mensagem = `
-            Entrega para: ${nome}
-            Endereço: ${endereco}
-            Local de entrega: ${linkGoogleMaps}
-            Telefone: ${tel}
-            `;
-            const telefoneEntregador = '558196227982'
-            const mensagemCriptografada = encodeURIComponent(mensagem);
-             
-        };
+        const msg = document.getElementById("mensagem");
         
-        else {
-            return 'preencha as informações'
-        };
-    };
-
-    catch(error) {
-        console.log(error)
-    };
-
-};
+        if (!rua || !numeroDaCasa || !bairro || !cidade || !tel || !cliente) {
+            msg.textContent = "preencha as informações";
+            return;
+        }
+        
+        const endereco = `${rua}, ${numeroDaCasa} - ${bairro}, ${cidade}`;
+        const enderecoCriptografado = encodeURIComponent(endereco);
+        
+        const linkGoogleMaps =
+            `https://www.google.com/maps/dir/?api=1&destination=${enderecoCriptografado}&travelmode=driving`;
+        
+        const mensagem =
+            `Entrega para: ${cliente}\n` +
+            `Endereço: ${endereco}\n` +
+            `Local de entrega: ${linkGoogleMaps}\n` +
+            `Telefone: ${tel}`;
+        
+        const mensagemCriptografada = encodeURIComponent(mensagem);
+        const linkWhatsapp =
+            `https://wa.me/558196227982?text=${mensagemCriptografada}`;
+        
+        window.open(linkWhatsapp, "_blank");
+        
+    } catch (error) {
+        console.log(error);
+    }
+}

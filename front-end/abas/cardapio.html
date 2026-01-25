@@ -11,10 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-
-<script src="front-end/js/script.js">
-</script>
-
 <body>
     <header>
         <nav class="nav-bar">
@@ -153,7 +149,7 @@
             <div class="conteiner">
                 <div id="cep">
                     <h2 id="textcep">Digite seu CEP</h2>
-                    <form action="cep.js" method="get" autocomplete="on">
+                    <form autocomplete="on">
                         <p>
                             <label for="icep"></label>
                             <input type="text" name="cep" id="icep" placeholder="00000-000" pattern="[0-9]{8}" title="Digite um CEP com 8 números" required>
@@ -164,6 +160,7 @@
                             <input type="reset" value="Limpar">
                         </p>
                     </form>
+                    <p id="mensagem"></p>
                 </div>
 
                 <div id="emojloc">
@@ -208,5 +205,7 @@
             <p>Projeto desenvolvido inteiramente do zero. Imagens meramente ilustrativas. © 2026</p>
         </div>
     </footer>
+    <script src="../src/app.js" type="module"></script>
+    <script src="front-end/js/script.js" type="module"></script>
 </body>
 </html>

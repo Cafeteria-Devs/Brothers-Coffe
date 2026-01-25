@@ -1,5 +1,26 @@
-{
-    "Cafeteria 1": "00000-000",
-    "Cafeteria 2": "00000-000",
-    "Cafeteria 3": "00000-000"
-}
+[
+  {
+    "id": "brothers_candeias",
+    "nome": "Brothers Coffee Candeias",
+    "bairro": "Candeias",
+    "cep": "54430-220",
+    "latitude": -8.1935,
+    "longitude": -34.9191
+  },
+  {
+    "id": "brothers_piedade",
+    "nome": "Brothers Coffee Piedade",
+    "bairro": "Piedade",
+    "cep": "54410-000",
+    "latitude": -8.1882,
+    "longitude": -34.9197
+  },
+  {
+    "id": "brothers_cajueiro",
+    "nome": "Brothers Coffee Cajueiro Seco",
+    "bairro": "Cajueiro Seco",
+    "cep": "54310-000",
+    "latitude": -8.1659,
+    "longitude": -34.9209
+  }
+]
