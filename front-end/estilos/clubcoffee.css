@@ -1,2 +1,60 @@
 @charset "UTF-8";
 
+:root {
+    --vinho: #3C140C;
+    --darkcoffe: #28160C;
+    --mediumcoffe: #432614;
+    --ligthcoffe: #DAA466;
+    --branco: #DBCFC1;
+}
+
+.titulo-habilidades {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--darkcoffe);
+    margin: 60px 0 40px;
+}
+
+.habilidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+}
+
+.card-habilidade {
+    background-color: var(--darkcoffe);
+    width: 150px;
+    height: 170px;
+
+    border-radius: 40px 0px 0px 0px;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to right, #28160c, #daa466) 1;
+
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-habilidade span {
+    color: var(--ligthcoffe);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-habilidade img {
+    width: 70px;
+    height: 70px;
+}
+
+.card-habilidade:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 25px #28160c60;
+}
