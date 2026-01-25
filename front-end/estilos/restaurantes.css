@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+
+:root {
+    --vinho: #3C140C;
+    --darkcoffe: #28160C;
+    --mediumcoffe: #432614;
+    --ligthcoffe: #DAA466;
+    --branco: #DBCFC1;
+}
+
+.lojas {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.lojas h2 {
+    margin-bottom: 30px;
+    color: var(--darkcoffe);
+}
+
+.loja-card {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.loja-card:hover {
+    transform: scale(1.02);
+}
+
+.loja-info h3 {
+    margin-bottom: 5px;
+    color: var(--vinho);
+}
+
+.loja-info p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.fone a {
+    background-color: var(--ligthcoffe);
+    color: var(--darkcoffe);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.fone a:hover {
+    background-color: var(--mediumcoffe);
+    color: white;
+}
+
+.material-icons {
+    font-size: 28px;
+}
