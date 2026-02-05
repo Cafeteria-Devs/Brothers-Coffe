@@ -1,24 +1,7 @@
 // imports
 import { route } from "./route";
-import { cafeterias } from "./cep.json"
 
-function calcularDistancia(lat1, lon1, lat2, lon2) {
-    const R = 6371; // raio da Terra em KM
-    
-    const dLat = (lat2 - lat1) * Math.PI / 180;
-    const dLon = (lon2 - lon1) * Math.PI / 180;
-    
-    const a =
-        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos(lat1 * Math.PI / 180) *
-        Math.cos(lat2 * Math.PI / 180) *
-        Math.sin(dLon / 2) * Math.sin(dLon / 2);
-    
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    
-    return R * c; // distância em KM
-}
-const msg = document.getElementById("mensagem")
+const msg = document.getElementById("mensagem");
 
 
 // api requires
@@ -26,15 +9,15 @@ const urlAPI = 'https://brasilapi.com.br/api/cep/v2/'
 
 
 // user informartions
-let name = 'Rosa'
-let houseNumber = '291'
-let tel = '(81) 9 8967-2044'
+let name = document.getElementById("userName"). value;
+let houseNumber = document.getElementById("houseNumber").value;
+let tel = document.getElementById("tel").value;
 
 
 // Endereço do cliente 
 async function getAddress() {
     try{
-        let cep = document.getElementById("icep").value;
+        let cep = document.getElementById("cep").value;
 
         const response = await fetch(urlAPI + cep);
 
@@ -93,15 +76,13 @@ async function getAddress() {
     }
 
     catch(error) {
-        return msg.textContent = error;
+        console.log(error.message);
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("form");
-    
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
+const request = document.getElementById("send");
+
+request.addEventListener('click', () => {
         getAddress();
-    });
-});
+    }
+)
