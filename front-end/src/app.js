@@ -1,23 +1,19 @@
-// imports
-import { route } from "./route";
+import { route } from "./route.js";
 
 const msg = document.getElementById("mensagem");
-
 
 // api requires
 const urlAPI = 'https://brasilapi.com.br/api/cep/v2/'
 
 
-// user informartions
-let name = document.getElementById("userName"). value;
-let houseNumber = document.getElementById("houseNumber").value;
-let tel = document.getElementById("tel").value;
-
-
 // Endereço do cliente 
 async function getAddress() {
     try{
-        let cep = document.getElementById("cep").value;
+
+        let name = document.getElementById("userName").value.trim();
+        let houseNumber = document.getElementById("houseNumber").value.trim();
+        let tel = document.getElementById("tel").value.trim();
+        let cep = document.getElementById("cep").value.trim();
 
         const response = await fetch(urlAPI + cep);
 
@@ -35,30 +31,10 @@ async function getAddress() {
                     casa: houseNumber,
                     telefone: tel,
                     bairro: address.neighborhood,
-                    longitude: address.location.coordinates.longitude,
-                    latitude: address.location.coordinates.latitude
                 }
                 
-                let distanciaMenor = Infinity;
-                let cafeteriaProxima = null;
-                cafeterias.forEach((cafeteria) => {
-                    const distancia = calcularDistancia(
-                        nota.latitude,
-                        nota.longitude,
-                        cafeteria.latitude,
-                        cafeteria.longitude
-                    );
-                    
-                    if(distancia < distanciaMenor) {
-                        distanciaMenor = distancia;
-                        cafeteriaProxima = cafeteria.nome;
-                    };
-                });
-                
-                msg.textContent = `cafeteria mais próxima: ${cafeteriaProxima} a ${distanciaMenor}km`
-                
+
                 route(name, tel, nota.rua, houseNumber, nota.bairro, nota.cidade)
-                return nota;
                 break;
             case 400: 
                 throw new Error('Todos os campos devem estar completos');
