@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/logo_ico.ico" type="logo/x-icon">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/medias-query.css">
+    <link rel="stylesheet" href="../estilos/compras.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Comprar</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="nav-logo">
+                <img src="../imagens/logo-sem-fundo.png" alt="Brothers Coffee">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="../../index.html" 
+                    onclick="fade(event)">Início</a></li>
+                <li><a href="../cardapio.html" onclick="fade(event)">Cardápio</a></li>
+                <li><a href="../restaurantes.html" onclick="fade(event)">Lojas</a></li>
+                <li><a href="../contatos.html"
+                onclick="fade(event)">Contato</a></li>
+                <li><a href="../apoiadores.html"
+                onclick="fade(event)">Clube Coffee</a></li>
+            </ul>
+
+            <a href="../comprar.html">
+                <div class="nav-carrinho">
+                    <img src="../imagens/carrinho.png" alt="Carrinho de compras">
+                </div>
+            </a>
+        </nav>
+    </header>
+
+    <main class="comprar-main">
+        <section class="box-compra">
+
+            <h1>Finalizar Pedido</h1>
+
+            <div class="campo">
+                <label>Nome</label>
+                <input type="text" id="userName" placeholder="Seu nome" required>
+            </div>
+
+            <div class="campo">
+                <label>Número da casa</label>
+                <input type="text" id="houseNumber" placeholder="Ex: 123" required>
+            </div>
+
+            <div class="campo">
+                <label>CEP</label>
+                <input type="text" id="cep" placeholder="Somente números" required>
+            </div>
+
+            <div class="campo">
+                <label>Telefone</label>
+                <input type="text" id="tel" placeholder="(DDD) + número" required>
+            </div>
+
+            <button id="send">Enviar Pedido</button>
+            <p id="msg"></p>
+
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col logo-col">
+                <img src="../imagens/logo-sem-fundo.png" alt="Brothers Coffee" class="footer-logo">
+                <p>Entre em contato para o desenvolvimento de projetos.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Institucional</h3>
+                <a href="../../index.html">Início</a>
+                <a href="../abas/restaurantes.html">Lojas</a>
+                <a href="../abas/contatos.html">Contato</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <a href="../abas/cardapio.html">Cardápio</a>
+                <a href="../abas/apoiadores.html">Clube Coffee</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Redes sociais</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/grouppdev?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="../imagens/logo-insta.png" alt="Instagram"></a>
+                    <a href="https://github.com/EduardoMatheusDev" target="_blank"><img src="../imagens/logo-git-hub.png" alt="GitHub"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>Projeto desenvolvido inteiramente do zero. Imagens meramente ilustrativas. © 2026</p>
+        </div>
+    </footer>
+    <script type="module" src="../src/app.js" defer></script>
+    <script src="../js/script.js" defer></script>
+</body>
+</html>
