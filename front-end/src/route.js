@@ -1,12 +1,5 @@
 export function route(cliente, tel, rua, numeroDaCasa, bairro, cidade) {
     try {
-        const msg = document.getElementById("mensagem");
-        
-        if (!rua || !numeroDaCasa || !bairro || !cidade || !tel || !cliente) {
-            msg.textContent = "preencha as informações";
-            return;
-        }
-        
         const endereco = `${rua}, ${numeroDaCasa} - ${bairro}, ${cidade}`;
         const enderecoCriptografado = encodeURIComponent(endereco);
         
@@ -24,8 +17,9 @@ export function route(cliente, tel, rua, numeroDaCasa, bairro, cidade) {
             `https://wa.me/558196227982?text=${mensagemCriptografada}`;
         
         window.open(linkWhatsapp, "_blank");
-        
-    } catch (error) {
+    } 
+    
+    catch (error) {
         console.log(error);
     }
 }
