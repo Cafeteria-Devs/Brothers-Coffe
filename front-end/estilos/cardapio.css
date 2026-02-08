@@ -96,35 +96,3 @@ a:visited {
 #hcaf {
     margin-top: 70px;
 }
-
-#cep {
-    width: 600px;
-    height: 300px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-
-#textcep {
-    color: var(--darkcoffe);
-    font-size: 1.7em;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 30px;
-}
-
-#cep form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-
-#emojloc {
-    display: flex;
-    flex-flow: row nowrap;
-    height: 300px;
-}
