@@ -74,7 +74,7 @@ nav > ul > li > a:hover {
 
 #img {
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), url("../imagens/cafeteria.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), url("../public/cafeteria.jpg");
 
     background-size: cover;
     background-position: center;
@@ -124,7 +124,7 @@ nav > ul > li > a:hover {
 
 #img2 {
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), url("../imagens/cafe-fundo.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), url("../public/cafe-fundo.jpg");
 
     background-size: cover;
     background-position: center;
