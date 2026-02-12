@@ -58,3 +58,62 @@
     transform: translateY(-8px) scale(1.05);
     box-shadow: 0 10px 25px #28160c60;
 }
+
+
+.perfil-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(60, 20, 12, 0.1); /* Um toque de vinho bem leve */
+}
+
+.inf {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inf h2 {
+    color: var(--darkcoffe);
+    font-size: 2.2rem;
+}
+
+.inf h3 {
+    color: var(--mediumcoffe);
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+.social-dev a {
+    text-decoration: none;
+    color: var(--ligthcoffe);
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.divisor {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, var(--ligthcoffe), transparent);
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Estilo para o ícone do GitHub no perfil */
+.github-icon {
+    width: 70px; /* Tamanho discreto e elegante */
+    height: auto;
+    filter: brightness(0.8); /* Deixa um pouco mais escuro para combinar com o tema */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    margin-top: 10px;
+}
+
+.github-icon:hover {
+    transform: scale(1.2) rotate(5deg); /* Dá um leve pulo e gira ao passar o mouse */
+    filter: brightness(1.1); /* Brilha no hover */
+}
+
+.social-dev {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
