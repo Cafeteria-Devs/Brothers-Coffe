@@ -20,7 +20,7 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="./index.html" onclick="fade(event)">Início</a></li>
+                <li><a href="../../index.html" onclick="fade(event)">Início</a></li>
                 <li><a href="./cardapio.html" onclick="fade(event)">Cardápio</a></li>
                 <li><a href="./restaurantes.html" onclick="fade(event)">Lojas</a></li>
                 <li><a href="./contatos.html" onclick="fade(event)">Contato</a></li>
@@ -39,7 +39,6 @@
         <section class="box-compra">
 
             <h1>Finalizar Pedido</h1>
-
             <div class="campo">
                 <label>Nome</label>
                 <input type="text" id="userName" placeholder="Seu nome">
@@ -57,12 +56,28 @@
 
             <div class="campo">
                 <label>Telefone</label>
-                <input type="text" id="tel" placeholder="99 9 9999 9999">
+                <input type="text" id="tel" placeholder="99 9 9999 9999" maxlength="11">
+            </div>
+
+            <div class="campo">
+                <label for="product">Escolha seu Café</label>
+                <select id="product">
+                    <option value="" disabled selected>Selecione um produto</option>
+                    <option value="Cappucino">Cappucino</option>
+                    <option value="Americano">Americano</option>
+                    <option value="Con Panna">Con Panna</option>
+                    <option value="Mocha">Mocha</option>
+                    <option value="Flat White">Flat White</option>
+                    <option value="Dalgona">Dalgona</option>
+                    <option value="Glace">Glace</option>
+                    <option value="Marocchino">Marocchino</option>
+                    <option value="Pistachio Affogatto">Pistachio Affogatto</option>
+                </select>
             </div>
 
             <button id="send">Enviar Pedido</button>
             <p id="msg"></p>
-
+        
         </section>
     </main>
 

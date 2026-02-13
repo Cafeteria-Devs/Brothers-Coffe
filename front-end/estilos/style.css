@@ -16,34 +16,39 @@
 }
 
 html {
-    scroll-behavior: smooth; /* rolagem suave */
+    scroll-behavior: smooth;
 }
 
+/* --- HEADER / NAV (Ajustado para Responsividade) --- */
 nav {
     background-color: var(--branco);
-    padding: 15px;
-    height: 110px;
+    padding: 15px 40px;
+    min-height: 110px;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Distribui logo, links e carrinho */
     position: relative;
+    z-index: 100;
 }
 
 .nav-logo {
-    position: absolute;
-    left: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-logo > img {
     width: 150px;
     border-radius: 50%;
+    transition: width 0.3s ease;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite quebrar linha em tablets */
+    justify-content: center;
 }
 
 nav > ul > li > a {
@@ -52,7 +57,7 @@ nav > ul > li > a {
     padding: 10px;
     font-size: 1.1em;
     font-weight: bold;
-    padding-bottom: 5px;
+    transition: all 0.3s ease;
 }
 
 nav > ul > li > a:hover {
@@ -62,24 +67,27 @@ nav > ul > li > a:hover {
 }
 
 .nav-carrinho {
-    position: absolute;
-    right: 40px;
-    top: 35px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-carrinho > img {
     width: 45px;
     border-radius: 50%;
+    transition: transform 0.3s ease;
 }
 
+.nav-carrinho:hover > img {
+    transform: scale(1.1);
+}
+
+/* --- SEÇÃO INDEX (Mantido original) --- */
 #img {
     height: 100vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), url("../public/cafeteria.jpg");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,11 +133,9 @@ nav > ul > li > a:hover {
 #img2 {
     height: 100vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), url("../public/cafe-fundo.jpg");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,6 +148,7 @@ div > p > a {
     color: #DAA466;
 }
 
+/* --- FOOTER (Ajustado para Responsividade) --- */
 .footer {
     background-color: var(--darkcoffe);
     color: var(--branco);
@@ -174,6 +181,7 @@ div > p > a {
     text-decoration: none;
     color: var(--branco);
     font-size: 0.95em;
+    transition: color 0.3s ease;
 }
 
 .footer-col a:hover {
@@ -212,6 +220,7 @@ div > p > a {
     font-size: 0.85em;
 }
 
+/* --- TRANSIÇÕES DE PÁGINA --- */
 body {
     opacity: 1;
     transition: opacity 0.5s ease;
@@ -219,4 +228,47 @@ body {
 
 .fade-out {
     opacity: 0;
+}
+
+/* --- MEDIA QUERIES (O toque final para o celular) --- */
+
+@media (max-width: 850px) {
+    nav {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+        gap: 20px;
+    }
+    
+    .nav-logo, .nav-carrinho {
+        position: static;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .text-content h1 {
+        font-size: 2.2em;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-col {
+        align-items: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .nav-logo > img {
+        width: 120px;
+    }
 }

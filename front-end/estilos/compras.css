@@ -1,69 +1,147 @@
+/* --- Configurações Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-box: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --cor-primaria: #6b4f3b; /* Marrom Café */
+    --cor-secundaria: #080300;
+    --cor-fundo: #f4f1ea;
+    --cor-borda: #ccc;
+    --cor-erro: #e74c3c;
+    --cor-sucesso: #27ae60;
+}
+
+body {
+    background-color: var(--cor-fundo);
+}
+
+/* --- Layout Principal --- */
 .comprar-main {
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 80vh;
 }
 
 .box-compra {
     width: 100%;
     max-width: 450px;
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 12px rgba(0,0,0,.1);
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .box-compra h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    color: var(--cor-secundaria);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
 }
 
+/* --- Campos de Formulário --- */
 .campo {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
-.campo input {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-
+.campo label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 6px;
+    margin-left: 2px;
 }
 
-button {
+/* Estilização combinada de Input e Select */
+.campo input, 
+.campo select {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Estilo específico para o seletor (Dropdown) */
+.campo select {
+    cursor: pointer;
+    appearance: none; /* Remove seta padrão */
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%236b4f3b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+.campo input:focus, 
+.campo select:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(107, 79, 59, 0.15);
+}
+
+.campo input::placeholder {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* --- Botão --- */
+button#send {
     width: 100%;
-    padding: 12px;
-    background: #6b4f3b;
+    padding: 15px;
+    background: var(--cor-primaria);
     border: none;
     color: white;
-    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
     border-radius: 8px;
     cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s, background-color 0.3s, filter 0.3s;
 }
+
+button#send:hover {
+    filter: brightness(1.1);
+}
+
+button#send:active {
+    transform: scale(0.98);
+}
+
+button#send:disabled {
+    background: #a8a8a8;
+    cursor: not-allowed;
+}
+
 
 #msg {
-    margin-top: 15px;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
     text-align: center;
+    min-height: 1.2em;
 }
 
-button, a, input {
-    transition: all 0.25s ease;
-}
 
-button, a, input {
-    transition: all 0.25s ease;
-}
-
-button:hover {
-    filter: brightness(0.9);
-}
-
-button:active {
-    transform: scale(0.95);
-}
-
-button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
+@media (max-width: 480px) {
+    .box-compra {
+        padding: 25px 20px;
+    }
+    
+    .box-compra h1 {
+        font-size: 2rem;
+    }
 }

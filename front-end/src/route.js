@@ -1,4 +1,4 @@
-export function route(cliente, tel, rua, numeroDaCasa, bairro, cidade) {
+export function route(cliente, tel, rua, numeroDaCasa, bairro, cidade, produto) {
     try {
         const endereco = `${rua}, ${numeroDaCasa} - ${bairro}, ${cidade}`;
         const enderecoCriptografado = encodeURIComponent(endereco);
@@ -10,7 +10,8 @@ export function route(cliente, tel, rua, numeroDaCasa, bairro, cidade) {
             `Entrega para: ${cliente}\n` +
             `Endereço: ${endereco}\n` +
             `Local de entrega: ${linkGoogleMaps}\n` +
-            `Telefone: ${tel}`;
+            `Telefone: ${tel}\n` +
+            `Pedido: ${produto}`;
         
         const mensagemCriptografada = encodeURIComponent(mensagem);
         const linkWhatsapp =
