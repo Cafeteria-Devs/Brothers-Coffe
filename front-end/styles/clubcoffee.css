@@ -13,7 +13,7 @@ header {
 }
 
 body {
-    background-color: var(--branco);
+    background-color: white;
 }
 
 .titulo-habilidades {
