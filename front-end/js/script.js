@@ -10,3 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 500);
     };
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    mobileMenu.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        
+        // Opcional: Animação simples no ícone hambúrguer
+        mobileMenu.classList.toggle("toggle");
+    });
+});
+

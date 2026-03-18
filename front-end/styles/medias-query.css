@@ -1,100 +1,59 @@
-/* ===== TABLETS (até 768px) ===== */
-@media screen and (max-width: 768px) {
+/* Estilo do botão hambúrguer (escondido no desktop por padrão no seu style.css principal) */
+.mobile-menu {
+    display: none; 
+    cursor: pointer;
+}
 
-    /* NAVBAR */
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff; /* Cor das barrinhas - ajuste conforme seu tema */
+    margin: 8px;
+    transition: 0.3s;
+}
+
+/* ===== TABLETS E CELULARES ===== */
+@media screen and (max-width: 768px) {
+    .nav-logo img {
+        
+    }
     .nav-bar {
-        flex-direction: column;
-        padding: 10px;
-        gap: 10px;
+        flex-direction: row; /* Mantém logo e hambúrguer na mesma linha */
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .nav-logo img {
-        max-width: 140px;
+    .mobile-menu {
+        display: block; /* Mostra o botão no mobile */
     }
 
     .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        padding: 0;
+        position: absolute;
+        top: 8vh; /* Ajuste conforme a altura do seu header */
+        right: 0;
+        width: 100%; /* Ou 50vw para ocupar metade da tela */
+        height: 92vh;
+        background-color: #333; /* Cor de fundo do menu aberto */
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%); /* Esconde o menu para a direita */
+        transition: transform 0.3s ease-in;
+        z-index: 1000;
+    }
+
+    /* Classe que o JS vai adicionar para abrir o menu */
+    .nav-links.active {
+        transform: translateX(0%);
     }
 
     .nav-links li {
-        list-style: none;
+        margin: 0;
+        opacity: 0; /* Para um efeito de fade nos links (opcional) */
     }
-
-    .nav-carrinho img {
-        width: 28px;
-    }
-
-    /* FOOTER */
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 25px;
-    }
-
-    .footer-col {
-        width: 100%;
-    }
-
-    .footer-logo {
-        max-width: 120px;
-    }
-}
-
-
-/* ===== CELULARES (até 480px) ===== */
-@media screen and (max-width: 480px) {
-
-    /* NAVBAR */
-    .nav-bar {
-        padding: 8px;
-    }
-
-    .nav-logo img {
-        max-width: 110px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .nav-links a {
-        font-size: 0.95rem;
-    }
-
-    .nav-carrinho img {
-        width: 24px;
-    }
-
-    /* TEXTOS DAS SECTIONS */
-    .text-content h1 {
-        font-size: 1.5rem;
-    }
-
-    .text-content p {
-        font-size: 0.9rem;
-    }
-
-    /* FOOTER */
-    .footer-container {
-        padding: 20px 10px;
-    }
-
-    .footer-col h3 {
-        font-size: 1rem;
-    }
-
-    .footer-col a {
-        font-size: 0.9rem;
-    }
-
-    .footer-bottom p {
-        font-size: 0.8rem;
+    
+    .nav-links.active li {
+        opacity: 1;
+        transition: 0.5s;
     }
 }
