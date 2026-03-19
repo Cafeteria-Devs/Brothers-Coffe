@@ -272,3 +272,21 @@ body {
         width: 120px;
     }
 }
+
+
+@media (max-width: 768px) {
+    #img, #img2 {
+        height: 60vh; 
+        background-position: center center;
+        background-size: cover; 
+    }
+
+    .text-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .text-content p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+}
