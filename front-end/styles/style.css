@@ -129,6 +129,11 @@ nav {
     margin-bottom: 40px;
 }
 
+#pp {
+    color: var(--ligthcoffe);
+    font-weight: bold;
+    text-decoration: none;
+}
 .btn-scroll {
     text-decoration: none;
     color: var(--branco);
