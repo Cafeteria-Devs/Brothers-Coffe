@@ -10,13 +10,9 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/medias-query.css">
 </head>
-
-<script src="../js/script.js">
-</script>
-
 <body>
     <header>
-        <nav class="nav-bar">
+                <nav class="nav-bar">
             <div class="mobile-menu" id="mobile-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -26,20 +22,32 @@
             <div class="nav-logo">
                 <img src="../public/essenciais/logo-sem-fundo.png" alt="Brothers Coffee">
             </div>
-
+            
             <ul class="nav-links">
-                <li><a href="../../index.html" onclick="fade(event)">Início</a></li>
-                <li><a href="../pages/cardapio.html" onclick="fade(event)">Cardápio</a></li>
-                <li><a href="../pages/restaurantes.html" onclick="fade(event)">Lojas</a></li>
-                <li><a href="../pages/contatos.html" onclick="fade(event)">Contato</a></li>
-                <li><a href="../pages/apoiadores.html" onclick="fade(event)">Clube Coffee</a></li>
-            </ul>
-
-            <a href="../pages/comprar.html">
-                <div class="nav-carrinho">
-                    <img src="../public/essenciais/carrinho.png" alt="Carrinho de compras">
+                <div class="user-profile-menu">
+                    <img src="../public/essenciais/user-icon.png" alt="Usuário">
+                    <div class="user-status">
+                        <span class="user-name">Convidado</span>
+                        <div class="user-auth-btns">
+                            <a href="login.html" class="btn-login">Login</a>
+                            <a href="#" class="btn-logout">Sair</a>
+                        </div>
+                    </div>
                 </div>
-            </a>
+                <hr class="menu-divider">
+                
+                <li><a href="../../index.html" onclick="fade(event)">Início</a></li>
+                <li><a href="./cardapio.html" onclick="fade(event)">Cardápio</a></li>
+                <li><a href="./restaurantes.html" onclick="fade(event)">Lojas</a></li>
+                <li><a href="./contatos.html" onclick="fade(event)">Contato</a></li>
+                <li><a href="./apoiadores.html" onclick="fade(event)">Clube Coffee</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="./comprar.html" class="nav-carrinho">
+                    <img src="../public/essenciais/carrinho.png" alt="Carrinho">
+                </a>
+            </div>
         </nav>
     </header>
 
