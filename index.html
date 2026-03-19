@@ -11,33 +11,46 @@
 
 
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="mobile-menu" id="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            
-            <div class="nav-logo">
-                <img src="front-end/public/essenciais/logo-sem-fundo.png" alt="Brothers Coffee">
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="index.html" onclick="fade(event)">Início</a></li>
-                <li><a href="front-end/pages/cardapio.html" onclick="fade(event)">Cardápio</a></li>
-                <li><a href="front-end/pages/restaurantes.html" onclick="fade(event)">Lojas</a></li>
-                <li><a href="front-end/pages/contatos.html" onclick="fade(event)">Contato</a></li>
-                <li><a href="front-end/pages/apoiadores.html" onclick="fade(event)">Clube Coffee</a></li>
-                </ul>
-    <a href="front-end/pages/comprar.html">
-        <div class="nav-carrinho">
-            <img src="front-end/public/essenciais/carrinho.png" alt="Carrinho de compras">
+<header>
+    <nav class="nav-bar">
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
-    </a>
-</nav>
+        
+        <div class="nav-logo">
+            <img src="front-end/public/essenciais/logo-sem-fundo.png" alt="Brothers Coffee">
+        </div>
 
-    </header>
+        <ul class="nav-links">
+            <div class="user-profile-menu">
+                <img src="front-end/public/essenciais/user-icon.png" alt="Usuário">
+                <div class="user-status">
+                    <span class="user-name">Convidado</span>
+                    <div class="user-auth-btns">
+                        <a href="login.html" class="btn-login">Login</a>
+                        <a href="#" class="btn-logout">Sair</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="menu-divider">
+            
+            <li><a href="index.html" onclick="fade(event)">Início</a></li>
+            <li><a href="front-end/pages/cardapio.html" onclick="fade(event)">Cardápio</a></li>
+            <li><a href="front-end/pages/restaurantes.html" onclick="fade(event)">Lojas</a></li>
+            <li><a href="front-end/pages/contatos.html" onclick="fade(event)">Contato</a></li>
+            <li><a href="front-end/pages/apoiadores.html" onclick="fade(event)">Clube Coffee</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="front-end/pages/comprar.html" class="nav-carrinho">
+                <img src="front-end/public/essenciais/carrinho.png" alt="Carrinho">
+            </a>
+        </div>
+    </nav>
+</header>
+
     <main>
     <section id="img">
         <div class="text-content">
@@ -92,9 +105,7 @@
             <p>Projeto desenvolvido inteiramente do zero. Imagens meramente ilustrativas. © 2026</p>
         </div>
     </footer>
-    <script src="front-end/js/script.js" defer>
-</script>
-
+    <script src="front-end/js/script.js" defer></script>
 </body>
 </html>
 
