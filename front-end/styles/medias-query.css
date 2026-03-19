@@ -172,6 +172,48 @@
     .footer-bottom {
         font-size: 0.7rem;
     }
+    
+    #img, #img2 {
+        height: 70vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-content {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .text-content p {
+        font-size: 1rem;
+    }
+
+    .nav-logo img {
+        width: 80px;
+        height: auto;
+    }
+
+    .nav-actions img {
+        width: 30px;
+        height: auto;
+    }
+
+    .footer-logo {
+        width: 120px;
+    }
+
+    .social-icons img {
+        width: 35px;
+    }
 }
 
 @media (max-width: 480px) {
