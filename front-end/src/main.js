@@ -14,36 +14,40 @@ async function getAddress() {
 
         if(!name || !houseNumber || !tel || !cep || !product) {
             msg.style.color = 'red';
-            msg.textContent = 'Preencha todos os campos e escolha seu café';
+            msg.textContent = 'Preencha todos os campos';
             return;
         }
 
         const response = await fetch(urlAPI + cep);
-        const status = response.status;
-
-        if(status === 200) {
+        
+        if(response.status >= 500 && response.status <= 599) {
+            msg.style.color = 'red';
+            msg.textContent = 'Serviço indisponível';
+            return;
+        }
+        
+        if(response.ok) {
             const address = await response.json();
             
-
             route(name, tel, address.street, houseNumber, address.neighborhood, address.city, product);
 
             msg.style.color = 'black';
             msg.textContent = 'Pedido feito com sucesso!';
         } else {
             msg.style.color = 'red';
-            msg.textContent = 'CEP não encontrado ou erro na API';
+            msg.textContent = 'Digite um CEP válido';
             return;
         }
-    } catch(error) {
-        console.log(error.message);
+    } catch(err) {
+        console.log(err.message);
     }
 }
 
 const inputs = document.querySelectorAll('input');
 const send = document.querySelector('#send');
 
-inputs.forEach(element => {
-    element.addEventListener('click', () => {
+inputs.forEach(e => {
+    e.addEventListener('focus', () => {
         msg.style.color = 'black';
         msg.textContent = '';
     });

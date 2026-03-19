@@ -1,6 +1,6 @@
 export function route(cliente, tel, rua, numeroDaCasa, bairro, cidade, produto) {
     try {
-        const endereco = `${rua}, ${numeroDaCasa} - ${bairro}, ${cidade}`;
+        const address = `${rua}, ${numeroDaCasa} - ${bairro}, ${cidade}`;
         const enderecoCriptografado = encodeURIComponent(endereco);
         
         const linkGoogleMaps =
@@ -18,9 +18,8 @@ export function route(cliente, tel, rua, numeroDaCasa, bairro, cidade, produto) 
             `https://wa.me/558196227982?text=${mensagemCriptografada}`;
         
         window.open(linkWhatsapp, "_blank");
-    } 
-    
-    catch (error) {
-        console.log(error);
+        
+    } catch (err) {
+        console.log(err.message);
     }
 }
