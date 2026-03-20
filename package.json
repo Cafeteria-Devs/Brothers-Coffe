@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Cafeteria-Devs/Brothers-Coffe/issues"
   },
-  "homepage": "https://github.com/Cafeteria-Devs/Brothers-Coffe#readme"
+  "homepage": "https://github.com/Cafeteria-Devs/Brothers-Coffe#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.99.3"
+  }
 }
