@@ -1,0 +1,64 @@
+/* --- HEADER & NAVIGATION --- */
+nav {
+    background-color: var(--branco);
+    padding: 15px 40px;
+    min-height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+}
+
+.mobile-menu {
+    display: none; /* Escondido no Desktop */
+}
+
+.nav-logo img {
+    width: 150px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--darkcoffe);
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: var(--vinho);
+    color: var(--ligthcoffe);
+    border-radius: 10px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-carrinho img {
+    width: 45px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.nav-carrinho:hover img {
+    transform: scale(1.1);
+}
+
+/* Perfil dentro do Menu (Escondido no Desktop) */
+.user-profile-menu, .menu-divider {
+    display: none;
+}
