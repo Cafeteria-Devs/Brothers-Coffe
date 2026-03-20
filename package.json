@@ -1,0 +1,21 @@
+{
+  "name": "brothers-coffe",
+  "version": "1.0.0",
+  "description": "☕ Brothers Café | 2026\r Status do Projeto: v1.0 (Lançamento Funcional) 🚀",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cafeteria-Devs/Brothers-Coffe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Cafeteria-Devs/Brothers-Coffe/issues"
+  },
+  "homepage": "https://github.com/Cafeteria-Devs/Brothers-Coffe#readme"
+}
