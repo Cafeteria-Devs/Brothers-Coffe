@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brothers Coffee</title>
+    <title>Brothers Coffe</title>
     <link rel="shortcut icon" href="../public/essenciais/logo_ico.ico" type="logo/x-icon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/restaurantes.css">
+    <link rel="stylesheet" href="../styles/contatos.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/elements/header.css">
     <link rel="stylesheet" href="../styles/elements/footer.css">
     <link rel="stylesheet" href="../styles/media/tablet.css">
     <link rel="stylesheet" href="../styles/media/mobile.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <header>
                 <nav class="nav-bar">
@@ -39,7 +40,7 @@
                 </div>
                 <hr class="menu-divider">
                 
-                <li><a href="../../index.html" onclick="fade(event)">Início</a></li>
+                <li><a href="../index.html" onclick="fade(event)">Início</a></li>
                 <li><a href="./cardapio.html" onclick="fade(event)">Cardápio</a></li>
                 <li><a href="./restaurantes.html" onclick="fade(event)">Lojas</a></li>
                 <li><a href="./contatos.html" onclick="fade(event)">Contato</a></li>
@@ -54,50 +55,42 @@
         </nav>
     </header>
 
-    <main class="lojas">
-        <h2>Nossas Lojas</h2>
+    <main>
+        <section class="contato-section">
+            <h1 class="contato-titulo">Entre em contato</h1>
+            <p class="contato-subtitulo">
+                Estamos prontos para ouvir você. Fale conosco pelos canais abaixo.
+            </p>
 
-        <div class="loja-card">
-            <div class="loja-info">
-                <h3>Brothers Coffee Candeias</h3>
-                <p>Rua Iguatemi - Candeias<br>Jaboatão dos Guararapes / PE</p>
-            </div>
+            <div class="contato-cards">
 
-            <div class="fone">
-                <a href="https://criarmeulink.com.br/u/1769349921" target="_blank">
-                    <span class="material-icons">call</span>
+                <a href="https://www.instagram.com/grouppdev?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                    <div class="contato-card">
+                        <img src="../public/essenciais/logo_insta_darkcoffee.png" alt="Instagram">
+                        <h3>Instagram</h3>
+                        <p>@grouppdev<br>Feche projetos conosco</p>
+                    </div>
                 </a>
-            </div>
-        </div>
-        
-        <div class="loja-card">
-            <div class="loja-info">
-                <h3>Brothers Coffee Piedade</h3>
-                <p>nao sei ainda<br>Jaboatão dos Guararapes / PE</p>
-            </div>
 
-            <div class="fone">
                 <a href="https://criarmeulink.com.br/u/1769349921" target="_blank">
-                    <span class="material-icons">call</span>
+                    <div class="contato-card">
+                        <img src="../public/essenciais/fone_darkcoffee.png" alt="Telefone">
+                        <h3>Telefone</h3>
+                        <p>(81) 99999-9999<br>Seg a Sex • 8h às 18h</p>
+                    </div>
                 </a>
-            </div>
-        </div>
 
-        <div class="loja-card">
-            <div class="loja-info">
-                <h3>Brothers Coffee Cajueiro Seco</h3>
-                <p>nao sei ainda<br>Jaboatão dos Guararapes / PE</p>
-            </div>
-
-            <div class="fone">
-                <a href="https://criarmeulink.com.br/u/1769349921" target="_blank">
-                    <span class="material-icons">call</span>
+                <a href="#" target="_blank">
+                    <div class="contato-card">
+                        <img src="../public/essenciais/email_darkcoffee.png" alt="Email">
+                        <h3>Email</h3>
+                        <p>contato@brotherscoffee.com<br>Resposta em até 24h</p>
+                    </div>
                 </a>
-            </div>
-        </div>
 
+            </div>
+        </section>
     </main>
-
 
     <footer class="footer">
         <div class="footer-container">
@@ -109,7 +102,7 @@
 
             <div class="footer-col">
                 <h3>Institucional</h3>
-                <a href="../../index.html">Início</a>
+                <a href="../index.html">Início</a>
                 <a href="../pages/restaurantes.html">Lojas</a>
                 <a href="../pages/contatos.html">Contato</a>
             </div>
@@ -134,6 +127,7 @@
             <p>Projeto desenvolvido inteiramente do zero. Imagens meramente ilustrativas. © 2026</p>
         </div>
     </footer>
+    
     <script src="../js/script.js" defer></script>
 </body>
 </html>
