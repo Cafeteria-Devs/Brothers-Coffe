@@ -4,7 +4,8 @@
   "description": "☕ Brothers Café | 2026\r Status do Projeto: v1.0 (Lançamento Funcional) 🚀",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite"
   },
   "repository": {
     "type": "git",
