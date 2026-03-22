@@ -25,7 +25,8 @@
     "vite": "^8.0.1"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.99.3"
+    "@supabase/supabase-js": "^2.99.3",
+    "tsc": "^2.0.4",
+    "typescript": "^5.9.3"
   }
-
 }
