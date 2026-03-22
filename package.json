@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/Cafeteria-Devs/Brothers-Coffe#readme",
   "devDependencies": {
-    "@supabase/supabase-js": "^2.99.3",
     "vite": "^8.0.1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.99.3"
   }
+
 }
