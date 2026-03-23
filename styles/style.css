@@ -87,6 +87,18 @@ body {
 .desktop-user-link img {
     width: 24px;
     height: 24px;
+    border-radius: 50%;
+}
+
+.desktop-user-link {
+    display: block;
+}
+
+/* Ocultar ícone desktop em mobile e tablet */
+@media (max-width: 1024px) {
+    .desktop-user-link {
+        display: none;
+    }
 }
 
 .desktop-user-modal {
