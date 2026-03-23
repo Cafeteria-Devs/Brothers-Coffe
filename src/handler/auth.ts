@@ -18,5 +18,5 @@ async function auth() {
 
     if (error) { console.error(error.message); return null };
 
-    console.log(data)
+    console.log(data);
 }

@@ -45,6 +45,9 @@
         </ul>
 
         <div class="nav-actions">
+            <a href="#" id="desktop-user-link" class="desktop-user-link" title="Meu Perfil">
+                <img src="/essenciais/user-icon.png" alt="Perfil">
+            </a>
             <a href="/pages/comprar.html" class="nav-carrinho">
                 <img src="/essenciais/carrinho.png" alt="Carrinho">
             </a>
@@ -102,5 +105,15 @@
         </div>
     </footer>
   <script type="module" src="/src/utils/script.js" defer></script>
+
+  <div id="desktop-user-modal" class="desktop-user-modal" aria-hidden="true">
+      <div class="desktop-user-modal-content" role="dialog" aria-modal="true" aria-labelledby="desktop-user-modal-title">
+          <button id="desktop-user-modal-close" class="desktop-user-modal-close" aria-label="Fechar">×</button>
+          <h3 id="desktop-user-modal-title">Minha Conta</h3>
+          <p>Clique em uma opção:</p>
+          <a href="/pages/login.html" class="desktop-user-modal-btn">Login</a>
+          <button id="desktop-user-logout" class="desktop-user-modal-btn">Sair</button>
+      </div>
+  </div>
 </body>
 </html>
