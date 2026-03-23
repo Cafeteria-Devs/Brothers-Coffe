@@ -1,12 +1,6 @@
 @charset "UTF-8";
 
-:root {
-    --vinho: #3C140C;
-    --darkcoffe: #28160C;
-    --mediumcoffe: #432614;
-    --ligthcoffe: #DAA466;
-    --branco: #DBCFC1;
-}
+@import "./colors.css";
 
 * {
     font-family: Arial, Helvetica, sans-serif;
