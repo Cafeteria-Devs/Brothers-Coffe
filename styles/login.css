@@ -1,7 +1,113 @@
+@import "./colors.css";
+
+/* Reset basico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 :root {
-    --vinho: #3C140C;
-    --darkcoffe: #28160C;
-    --mediumcoffe: #432614;
-    --ligthcoffe: #DAA466;
-    --branco: #DBCFC1;
+  --cor-primaria: #6b4f3b;
+  --cor-secundaria: #080300;
+  --cor-fundo: #f4f1ea;
+  --cor-borda: #d6d6d6;
+}
+
+body {
+  background: var(--cor-fundo);
+  color: var(--cor-secundaria);
+}
+
+.desktop-user-link img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+/* Area principal */
+main {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+}
+
+.login-payload {
+  width: 100%;
+  max-width: 460px;
+}
+
+.login-payload form {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Campos */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  text-transform: capitalize;
+}
+
+.field input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2f2f2f;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input::placeholder {
+  color: #9a9a9a;
+}
+
+.field input:focus {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px rgba(107, 79, 59, 0.15);
+}
+
+/* Se adicionar botao no form depois */
+.login-payload form button[type="submit"] {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--cor-primaria);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.1s ease;
+}
+
+.login-payload form button[type="submit"]:hover {
+  filter: brightness(1.08);
+}
+
+.login-payload form button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 480px) {
+  .login-payload form {
+    padding: 22px 18px;
+  }
 }
