@@ -24,8 +24,12 @@ async function auth() {
     
 }
 
-b.addEventListener('click', (e) =>{
+b?.addEventListener('click', async (e) => {
     e.preventDefault();
-    const r = auth();
-    msg.textContent = r;
+    const r = await auth();
+
+    if(r && r.user) {
+        msg.textContent = r?.user.email ?? 'email não encontrado';
+        window.location.href = '/pages/admin/dashboard.html';
+    };
 })
