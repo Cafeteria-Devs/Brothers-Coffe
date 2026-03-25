@@ -48,6 +48,11 @@ main {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
+.login-payload form h2 {
+  color: #4a4a4a;
+  text-align: center;
+}
+
 /* Campos */
 .field {
   display: flex;
@@ -106,8 +111,104 @@ main {
   transform: scale(0.98);
 }
 
-@media (max-width: 480px) {
-  .login-payload form {
-    padding: 22px 18px;
-  }
+.login-payload p {
+  color: black;
+  text-align: center;
+}
+
+/* Desktop user profile modal */
+.desktop-user-link img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.desktop-user-link {
+    display: block;
+}
+
+/* Ocultar ícone desktop em mobile e tablet */
+@media (max-width: 1024px) {
+    .desktop-user-link {
+        display: none;
+    }
+}
+
+.desktop-user-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.desktop-user-modal.active {
+    display: flex;
+}
+
+.desktop-user-modal-content {
+    background: var(--vinho);
+    color: var(--branco);
+    max-width: 320px;
+    width: 90%;
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.desktop-user-modal-content h3,
+.desktop-user-modal-content p {
+    color: var(--branco);
+}
+
+.desktop-user-modal-btn {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.65rem 0.75rem;
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--ligthcoffe);
+    border-radius: 8px;
+    background: var(--mediumcoffe);
+    color: var(--branco);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.desktop-user-modal-btn:hover {
+    background: var(--darkcoffe);
+    color: #fff;
+}
+
+.desktop-user-modal-close {
+    color: var(--branco);
+}
+
+.desktop-user-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    float: right;
+    cursor: pointer;
+}
+
+.desktop-user-modal-btn {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.65rem 0.75rem;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #432614;
+    border-radius: 8px;
+    background: #fff;
+    color: #432614;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.desktop-user-modal-btn:hover {
+    background: #f6f0ec;
 }
