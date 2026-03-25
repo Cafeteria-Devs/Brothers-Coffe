@@ -6,6 +6,8 @@ const supabase = createClient(
     config.apiURL,
     config.apiKEY
 );
+const b = document.querySelector('#send') as HTMLButtonElement;
+const msg = document.querySelector('#msg') as HTMLParagraphElement;
 
 async function auth() {
     const email = (document.querySelector('#email') as HTMLInputElement).value;
@@ -18,5 +20,12 @@ async function auth() {
 
     if (error) { console.error(error.message); return null };
 
-    console.log(data);
+    return data;
+    
 }
+
+b.addEventListener('click', (e) =>{
+    e.preventDefault();
+    const r = auth();
+    msg.textContent = r;
+})
