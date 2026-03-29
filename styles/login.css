@@ -1,13 +1,15 @@
 @import "./colors.css";
 
-/* Reset basico */
-* {
+/* Reset basico para login somente */
+.login-page,
+.login-page * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Variáveis globais podem ficar em colors.css se já existem no resto do projeto */
 :root {
   --cor-primaria: #6b4f3b;
   --cor-secundaria: #080300;
@@ -15,7 +17,12 @@
   --cor-borda: #d6d6d6;
 }
 
-body {
+.login-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
   background: var(--cor-fundo);
   color: var(--cor-secundaria);
 }
@@ -27,7 +34,7 @@ body {
 }
 
 /* Area principal */
-main {
+.login-page {
   min-height: 80vh;
   display: flex;
   align-items: center;
