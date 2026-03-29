@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../../styles/style.css';
+import '../../styles/media/mobile.css'
+import '../../styles/media/tablet.css'
 
 export default function Home() {
   return (
