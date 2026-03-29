@@ -1,3 +1,4 @@
+import { redirect } from 'react-router-dom';
 import config from '../config/config.js';
 import { createClient } from '@supabase/supabase-js';
 
@@ -7,9 +8,12 @@ const supabase = createClient(
 );
 
 async function loginUser(email: string, pass: string) {
-    const { data, error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signUp({
         email: email,
         password: pass,
+        options: {
+            emailRedirectTo: 'admin/dashboard'
+        }
     });
 
     if (error) {

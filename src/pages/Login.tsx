@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import loginUser from '../services/auth';
+import loginUser from '../services/login';
 import "../../styles/login.css"
 import "../../styles/media/mobile.css"
 import "../../styles/media/tablet.css"
@@ -19,7 +19,7 @@ const LoginPage: React.FC = () => {
       const response = await loginUser(email, password);
       
       if (response.success) {
-        setMessage(response.data?.user.email ?? '');
+        setMessage(response.data?.user?.email ?? '');
         window.location.href = '/admin/dashboard';
       } else {
         setMessage(response.error || 'Erro ao realizar login.');
@@ -66,13 +66,14 @@ const LoginPage: React.FC = () => {
           <button type="submit" id="send" disabled={loading}>
             {loading ? 'Carregando...' : 'Enviar'}
           </button>
-        </form>
-        
-        {message && (
+
+          {message && (
           <p id="msg" className={message.includes('@') ? 'success' : 'error'}>
             {message}
           </p>
         )}
+        </form>      
+        
       </div>
     </main>
   );
