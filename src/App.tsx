@@ -7,6 +7,7 @@ import Stores from './pages/Stores'
 import Contacts from './pages/Contact'
 import Products from './pages/Products'
 import LoginPage from './pages/Login'
+import Dashboard from './pages/Dashboard'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contatos" element={<Contacts />} />
         <Route path="/cardapio" element={<Products />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/admin/dashboard" element={<Dashboard />} />
       </Routes>
 
       <Footer />
