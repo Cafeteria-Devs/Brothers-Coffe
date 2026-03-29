@@ -6,6 +6,7 @@ import DevTeam from './pages/DevTeam'
 import Stores from './pages/Stores'
 import Contacts from './pages/Contact'
 import Products from './pages/Products'
+import LoginPage from './pages/Login'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/restaurantes" element={<Stores />} />
         <Route path="/contatos" element={<Contacts />} />
         <Route path="/cardapio" element={<Products />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
 
       <Footer />
