@@ -1,5 +1,9 @@
+import { auth } from "../services/auth";
 import React, { useState } from 'react';
 import '../../styles/dashboard.css';
+import '../../styles/media/mobile.css';
+import '../../styles/media/tablet.css';
+auth()
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState('overview');

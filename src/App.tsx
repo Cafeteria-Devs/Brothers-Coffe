@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
+import ProtectedRoute from './components/ProtectedRoute'
 import Home from './pages/Home'
 import DevTeam from './pages/DevTeam'
 import Stores from './pages/Stores'
@@ -23,7 +24,7 @@ function App() {
         <Route path="/cardapio" element={<Products />} />
         <Route path="/comprar" element={<Comprar />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/admin/dashboard" element={<Dashboard />} />
+        <Route path="/admin/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
       </Routes>
 
       <Footer />
