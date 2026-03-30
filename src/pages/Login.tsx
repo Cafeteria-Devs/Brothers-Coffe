@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import loginUser from '../services/login';
 import "../../styles/login.css"
 import "../../styles/media/mobile.css"
@@ -9,6 +10,7 @@ const LoginPage: React.FC = () => {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,7 +22,7 @@ const LoginPage: React.FC = () => {
       
       if (response.success) {
         setMessage(response.data?.user?.email ?? '');
-        window.location.href = '/admin/dashboard';
+        navigate('/admin/dashboard');
       } else {
         setMessage(response.error || 'Erro ao realizar login.');
       }
