@@ -6,6 +6,7 @@ import DevTeam from './pages/DevTeam'
 import Stores from './pages/Stores'
 import Contacts from './pages/Contact'
 import Products from './pages/Products'
+import Comprar from './pages/Comprar'
 import LoginPage from './pages/Login'
 import Dashboard from './pages/Dashboard'
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/restaurantes" element={<Stores />} />
         <Route path="/contatos" element={<Contacts />} />
         <Route path="/cardapio" element={<Products />} />
+        <Route path="/comprar" element={<Comprar />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/admin/dashboard" element={<Dashboard />} />
       </Routes>
