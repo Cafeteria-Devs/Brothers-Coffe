@@ -1,22 +1,15 @@
-import config from '../config/config.js';
-import { createClient } from '@supabase/supabase-js';
+import { redirect } from "react-router-dom";
+import supabase from "../config/supabase";
 
-const supabase = createClient(
-    config.apiURL,
-    config.apiKEY
-);
-
-async function loginUser(email: string, pass: string) {
-    const { data, error } = await supabase.auth.signInWithPassword({
-        email: email,
-        password: pass,
-    });
-
-    if (error) {
-        return { success: false, error: error.message };
+export async function auth() {
+    const { data, error } = await supabase.auth.getSession();
+    console.log(data);
+    
+    if (!data.session) {
+        return redirect('/login');
     }
-
-    return { success: true, data };
+    
+    if (data.session?.user.email === import.meta.env.VITE_ADMIN) {
+        console.log('logado');
+    }
 }
-
-export default loginUser
