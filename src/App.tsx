@@ -10,7 +10,7 @@ import Products from './pages/Products'
 import Comprar from './pages/Comprar'
 import LoginPage from './pages/Login'
 import Dashboard from './pages/Dashboard'
-
+import NotFoundPage from './pages/NotFound'
 function App() {
   return (
     <BrowserRouter>
@@ -25,6 +25,7 @@ function App() {
         <Route path="/comprar" element={<Comprar />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/admin/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+        <Route path="*" element={NotFoundPage} />
       </Routes>
 
       <Footer />
