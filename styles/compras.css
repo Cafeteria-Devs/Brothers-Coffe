@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root {
@@ -39,7 +38,6 @@ body {
 }
 
 .box-compra h1 {
-    font-family: 'Bebas Neue', cursive;
     font-size: 2.5rem;
     color: var(--cor-secundaria);
     text-align: center;
