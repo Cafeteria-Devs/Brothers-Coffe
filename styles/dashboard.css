@@ -151,14 +151,6 @@
   font-weight: 600;
 }
 
-/* ===== MAIN GRID ===== */
-.main-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
 /* ===== PANELS ===== */
 .panel {
   background: var(--admin-card);
@@ -172,100 +164,6 @@
   margin: 0 0 16px 0;
   font-size: 1.1rem;
   color: var(--admin-text);
-}
-
-/* ===== CHART PANEL ===== */
-.chart-container {
-  min-height: 180px;
-  padding: 16px 0;
-  display: flex;
-  align-items: flex-end;
-}
-
-.bars {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  gap: 8px;
-  width: 100%;
-  height: 160px;
-}
-
-.bar-item {
-  flex: 1;
-  background: linear-gradient(180deg, #6b4f3b 0%, #8b6f5b 100%);
-  border-radius: 6px 6px 0 0;
-  min-height: 20px;
-  position: relative;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.bar-item:hover {
-  opacity: 0.8;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-}
-
-.bar-label {
-  position: absolute;
-  bottom: -22px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--admin-text-light);
-  white-space: nowrap;
-}
-
-.chart-footer {
-  text-align: center;
-  margin-top: 28px;
-  color: var(--admin-text-light);
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-/* ===== REVENUE PANEL ===== */
-.revenue-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.revenue-item {
-  padding: 8px 0;
-}
-
-.revenue-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 6px;
-  font-size: 0.85rem;
-}
-
-.revenue-header span {
-  color: var(--admin-text-light);
-  font-weight: 500;
-}
-
-.revenue-header strong {
-  color: var(--admin-text);
-  font-weight: 700;
-}
-
-.revenue-bar {
-  background: rgba(107, 79, 59, 0.08);
-  height: 8px;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.revenue-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #6b4f3b 0%, #8b6f5b 100%);
-  border-radius: 4px;
-  transition: width 0.3s ease;
 }
 
 /* ===== DATA TABLE ===== */
@@ -517,28 +415,6 @@
     word-wrap: break-word;
   }
 
-  .bars {
-    height: 140px;
-    gap: 6px;
-  }
-
-  .bar-item {
-    border-radius: 4px 4px 0 0;
-  }
-
-  .bar-label {
-    bottom: -18px;
-    font-size: 0.7rem;
-  }
-
-  .chart-container {
-    min-height: 160px;
-    padding: 16px 0;
-  }
-
-  .chart-footer {
-    margin-top: 24px;
-  }
 }
 
 @media (max-width: 480px) {
