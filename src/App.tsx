@@ -25,7 +25,7 @@ function App() {
         <Route path="/comprar" element={<Comprar />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/admin/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-        <Route path="*" element={NotFoundPage} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
 
       <Footer />
