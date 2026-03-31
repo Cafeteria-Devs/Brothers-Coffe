@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const NotFoundPage: React.FC = () => {
   return (
@@ -18,12 +19,12 @@ const NotFoundPage: React.FC = () => {
           O conteúdo que você está procurando não existe ou foi movido para outro endereço.
         </p>
 
-        <button 
-          onClick={() => navigate('/')}
-          className="px-8 py-3 border-2 border-black text-sm font-bold uppercase hover:bg-black hover:text-white transition-colors duration-300"
-        >
+        <Link 
+          to="/" 
+          className="inline-block px-8 py-3 border-2 border-black text-sm font-bold uppercase hover:bg-black hover:text-white transition-colors duration-300"
+>
           Voltar ao Início
-        </button>
+        </Link>
       </div>
     </div>
   );
