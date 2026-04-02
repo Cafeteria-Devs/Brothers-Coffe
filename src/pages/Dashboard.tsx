@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import '../../styles/dashboard.css';
 import '../../styles/media/mobile.css';
 import '../../styles/media/tablet.css';
-import { DashboardPanel, StatItem, OrderItem, ProductItem } from '../components/dashboard/DashboardPanel';
+import { DashboardPanel } from '../components/dashboard/DashboardPanel';
+import { StatItem } from '../components/dashboard/OverviewTab';
+import { OrderItem } from '../components/dashboard/OrdersTab';
+import { ProductItem } from '../components/dashboard/ProductsTab';
 
 auth();
 
