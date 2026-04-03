@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import productsData from "../data/products";
+import { Product } from "../types/Product";
 import "../../styles/compras.css";
 import "../../styles/media/mobile.css";
 import "../../styles/media/tablet.css";
@@ -43,6 +45,16 @@ const Comprar = () => {
     setMsg("Pedido enviado com sucesso! ☕ Obrigado por comprar conosco.");
     clearForm();
   };
+
+    const [data, setData] = useState<Product[]>([]);
+
+    useEffect(() => {
+      const fecthData = async () => {
+        const products = await productsData();
+        setData(products)
+      }
+      fecthData();
+    })
 
   return (
     <main className="comprar-main">
@@ -105,15 +117,13 @@ const Comprar = () => {
               <option value="" disabled>
                 Selecione um produto
               </option>
-              <option value="Cappucino">Cappucino</option>
-              <option value="Americano">Americano</option>
-              <option value="Con Panna">Con Panna</option>
-              <option value="Mocha">Mocha</option>
-              <option value="Flat White">Flat White</option>
-              <option value="Dalgona">Dalgona</option>
-              <option value="Glace">Glace</option>
-              <option value="Marocchino">Marocchino</option>
-              <option value="Pistachio Affogatto">Pistachio Affogatto</option>
+              {
+                data.map((prod) => (
+                  <option key={prod.id} value={prod.name}>
+                    {prod.name}
+                  </option>
+                ))
+              }
             </select>
           </div>
 
