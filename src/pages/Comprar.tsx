@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import supabase from "../config/supabase";
 import productsData from "../data/products";
 import { Product } from "../types/Product";
 import "../../styles/compras.css";
@@ -12,7 +13,6 @@ const Comprar = () => {
   const [tel, setTel] = useState("");
   const [product, setProduct] = useState("");
   const [msg, setMsg] = useState("");
-
   const isValidCep = (value: string) => /^\d{8}$/.test(value);
   const isValidTel = (value: string) => /^\d{10,11}$/.test(value.replace(/\s+/g, ""));
 
@@ -42,19 +42,48 @@ const Comprar = () => {
       return;
     }
 
+    // Encontrar o produto selecionado
+    const selectedProduct = data.find(p => p.name === product);
+    if (!selectedProduct) {
+      setMsg("Produto inválido.");
+      return;
+    }
+
     setMsg("Pedido enviado com sucesso! ☕ Obrigado por comprar conosco.");
     clearForm();
+
+    // Salvar o pedido
+    saveOrder(selectedProduct.id);
+  };
+
+  const saveOrder = async (productId: number) => {
+    const session = JSON.parse(sessionStorage.getItem('sb-ionbouabqlgoafeansqh-auth-token'));
+    const user = session?.user?.email ?? null;
+    if (!user) {
+      console.error("Usuário não autenticado");
+      return;
+    }
+    try {
+      const { data, error } = await supabase
+        .from('logs_pedidos')
+        .insert({ user: user, product_id: productId });
+      if (error) throw error;
+      console.log("Pedido salvo:", data);
+    } catch (err) {
+      console.error("Erro ao salvar pedido:", err);
+      setMsg("Erro ao enviar pedido. Tente novamente.");
+    }
   };
 
     const [data, setData] = useState<Product[]>([]);
 
     useEffect(() => {
-      const fecthData = async () => {
+      const fetchData = async () => {
         const products = await productsData();
-        setData(products)
-      }
-      fecthData();
-    })
+        setData(products);
+      };
+      fetchData();
+    }, []);
 
   return (
     <main className="comprar-main">
