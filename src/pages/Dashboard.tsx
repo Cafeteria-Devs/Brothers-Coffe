@@ -21,6 +21,7 @@ export default function Dashboard() {
     { label: 'Clientes', value: '0', change: '-', icon: '👥' },
     { label: 'Ticket médio', value: 'R$ 0,00', change: '-', icon: '⭐' },
   ]);
+  const [topProducts, setTopProducts] = useState<ProductItem[]>([]);
 
   useEffect(() => {
     const fetchDashboardData = async () => {
@@ -64,6 +65,31 @@ export default function Dashboard() {
         }, 0);
         const averageTicket = orderCount > 0 ? totalRevenue / orderCount : 0;
 
+        const productSales = products.map((product) => ({
+          name: product.name,
+          sales: 0,
+          revenue: 0,
+        }));
+
+        (allOrders || []).forEach((order: any) => {
+          const product = products.find((p) => p.id === order.product_id);
+          if (!product) return;
+          const existing = productSales.find((item) => item.name === product.name);
+          if (existing) {
+            existing.sales += 1;
+            existing.revenue += product.price ?? 0;
+          }
+        });
+
+        const topProductsBySales = productSales
+          .sort((a, b) => b.sales - a.sales)
+          .slice(0, 4)
+          .map((item) => ({
+            name: item.name,
+            sales: item.sales,
+            revenue: `R$ ${item.revenue.toFixed(2).replace('.', ',')}`,
+          }));
+
         setRecentOrders(formattedOrders);
         setStats([
           { label: 'Receita', value: `R$ ${totalRevenue.toFixed(2).replace('.', ',')}`, change: orderCount ? '+0%' : '-', icon: '📈' },
@@ -71,6 +97,7 @@ export default function Dashboard() {
           { label: 'Clientes', value: `${uniqueCustomers}`, change: '+0', icon: '👥' },
           { label: 'Ticket médio', value: `R$ ${averageTicket.toFixed(2).replace('.', ',')}`, change: '+0', icon: '⭐' },
         ]);
+        setTopProducts(topProductsBySales);
       } catch (err) {
         console.error('Erro ao buscar dados do dashboard:', err);
       }
@@ -79,12 +106,6 @@ export default function Dashboard() {
     fetchDashboardData();
   }, []);
 
-  const topProducts: ProductItem[] = [
-    { name: 'Espresso Duplo', sales: 245, revenue: 'R$ 1.470' },
-    { name: 'Capuccino', sales: 189, revenue: 'R$ 945' },
-    { name: 'Café Coado', sales: 156, revenue: 'R$ 780' },
-    { name: 'Mocaccino', sales: 112, revenue: 'R$ 672' },
-  ];
 
   return (
     <DashboardPanel
