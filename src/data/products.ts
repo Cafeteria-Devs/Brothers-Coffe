@@ -4,14 +4,13 @@ import supabase from "../config/supabase";
 async function productsData(): Promise<Product[]> {
   try {
     const { data, error } = await supabase
-    .from('products')
-    .select('id, name, image_url, description')
+      .from('products')
+      .select('id, name, image_url, description, price')
 
-    if(error) throw error
+    if (error) throw error
 
     return data || []
-  }
-  catch(err) {
+  } catch (err) {
     console.info('erro ao buscar produtos')
     return []
   }
