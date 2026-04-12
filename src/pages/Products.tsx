@@ -12,7 +12,6 @@ const Products = () => {
     const fetchData = async () => {
       const products = await getProducts();
       setData(products);
-      console.warn(products)
     };
     fetchData();
   }, []);
