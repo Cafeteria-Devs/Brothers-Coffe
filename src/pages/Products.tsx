@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import productsData from "../data/products";
+import { getProducts } from "../services/products";
 import { Product } from "../types/Product";
 import "../../styles/cardapio.css"
 import "../../styles/media/mobile.css"
@@ -10,8 +10,9 @@ const Products = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const products = await productsData();
+      const products = await getProducts();
       setData(products);
+      console.warn(products)
     };
     fetchData();
   }, []);
