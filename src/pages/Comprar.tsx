@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import supabase from "../config/supabase";
-import productsData from "../data/products";
+import { getProducts } from "../services/products";
 import { Product } from "../types/Product";
 import "../../styles/compras.css";
 import "../../styles/media/mobile.css";
@@ -58,11 +58,7 @@ const Comprar = () => {
 
   const saveOrder = async (productId: number) => {
     const session = JSON.parse(sessionStorage.getItem('sb-ionbouabqlgoafeansqh-auth-token'));
-    const user = session?.user?.email ?? null;
-    if (!user) {
-      console.error("Usuário não autenticado");
-      return;
-    }
+    const user = session?.user?.email ?? "anonimo";
     try {
       const { data, error } = await supabase
         .from('logs_pedidos')
@@ -79,7 +75,7 @@ const Comprar = () => {
 
     useEffect(() => {
       const fetchData = async () => {
-        const products = await productsData();
+        const products = await getProducts();
         setData(products);
       };
       fetchData();
